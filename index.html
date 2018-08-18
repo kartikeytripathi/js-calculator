@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title> JS Calculator </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    
+    <body>
+        <h2>JS Calculator</h2>
+        <h3>By Kartikey Tripathi</h3>
+        <div class="container-fliuid">
+            <div class= "box">
+                <div id="numpad">
+                <form name="calculator">
+                    <div class = "row">
+                        <input type = "text" oninput="this.value=this.value.replace(/[^0-9+-/*]/g,'');" id = "screen" name = "answer" class= "screen" />
+                    </div>    
+                    
+                    <div class = "row">
+                        <input type="button" value="AC" class = "numbers ac" id="ac" onclick="calculator.answer.value = ''"  />
+                    </div>
+                    
+                    <div class="row">
+                        <input type="button" value="1" class="numbers" onclick = "calculator.answer.value += '1' " />
+                        <input type="button" value="2" class="numbers" onclick = "calculator.answer.value += '2'" />
+                        <input type="button" value="3" class="numbers" onclick = "calculator.answer.value += '3' " />
+                        <input type="button" value="+" class="numbers operation"  onclick = "calculator.answer.value += '+'" />
+                        
+                    </div>
+                    
+                    <div class="row">
+                        <input type="button" value="4" class="numbers" onclick = "calculator.answer.value += '4'" />
+                        <input type="button" value="5" class="numbers" onclick = "calculator.answer.value += '5'" />
+                        <input type="button" value="6" class="numbers" onclick = "calculator.answer.value += '6'" />
+                        <input type="button" value="-" class="numbers operation" onclick = "calculator.answer.value += '-'" />
+                        
+                    </div>
+                    
+                    <div class="row">
+                        <input type="button" value="7" class="numbers" onclick = "calculator.answer.value += '7'" />
+                        <input type="button" value="8" class="numbers" onclick = "calculator.answer.value += '8'" />
+                        <input type="button" value="9" class="numbers" onclick = "calculator.answer.value += '9'" />
+                        <input type="button" value="*" class="numbers operation" onclick = "calculator.answer.value += '*'" />
+                        
+                    </div>
+                    
+
+                    
+                    <div class="row">
+                        <input type="button" value="." class="numbers" onclick = "calculator.answer.value += '.'" />
+                        <input type="button" value="0" class="numbers" onclick = "calculator.answer.value += '0'" />
+                        <input type="button" value="=" id ="equals" class="numbers answer" onclick = "calculator.answer.value = eval(calculator.answer.value)" />
+                        <input type="button" value="/" class="numbers operation" onclick = "calculator.answer.value += '/'" />
+                        
+                    </div>
+                </form>
+                
+                </div>
+                
+            </div>
+        </div>
+        
+    </body>
+    
+</html>
